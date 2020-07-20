@@ -1,0 +1,59 @@
+body {
+  text-align: center;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: 0;
+}
+
+a {
+  display: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 0차 메뉴 */
+ul > li {
+  display: block;
+  width: 200px;
+  position: relative;
+  float: left;
+}
+
+ul > li:hover {
+  display: inline-block;
+  width: 200px;
+  color: white;
+}
+
+/* 1차 메뉴 */
+ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+ul > li:hover > ul {
+  display: block;
+  width: 200px;
+  color: white;
+}
+
+/*float부작용 해결*/
+ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+li {
+  background-color: gray;
+}
+
+li:hover {
+  background-color: black;
+}
